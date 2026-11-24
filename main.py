@@ -3,11 +3,11 @@
 
 Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
 
-The brutal truth, shipped as an error dialog: the code was never tested, and the only test was a wish.
+The brutal truth, shipped as an error dialog: the code was never tested, and the only test was hope.
 """
 import os
 
-ENTRY = 'Something went wrong: specifically, we shipped code nobody tested, the test suite was a wish, and the wish has now expired.'
+ENTRY = 'Something went wrong: specifically, we shipped code nobody tested, the test suite was a prayer, and the prayer has now expired.'
 
 
 def main() -> None:
