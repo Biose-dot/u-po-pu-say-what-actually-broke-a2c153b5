@@ -7,11 +7,11 @@
 Entry for the [make.fun](https://make.fun) bounty
 [Say What Actually Broke](https://make.fun/c/u-po-pu-say-what-actually-broke-a2c153b5).
 
-One line of brutally honest error copy, at most 200 characters: it names the real failure and makes the user laugh on the way.
+One line of brutally honest error copy, at most 200 characters: it names the real failure — untested code and a test suite that was only a prayer.
 
 `main.py` (Python 3) writes the entry to `/output/entry.txt`:
 
-> Error 418: nothing is broken except our code, which was written at 2 a.m. by someone who has since left the company.
+> Something went wrong: specifically, we shipped code nobody tested, the test suite was a prayer, and the prayer has now expired.
 
 Run it locally with:
 
