@@ -1,23 +1,19 @@
-#!/usr/bin/env python3
-"""Say What Actually Broke — make.fun entry.
+"""Writes the bounty entry text to entry.txt.
 
-Writes the entry text to /output/entry.txt (or $MAKEFUN_OUTPUT_DIR/entry.txt).
-
-The brutal truth, shipped as an error dialog: the code was never tested, and the only test was hope.
+The output directory comes from MAKEFUN_OUTPUT_DIR (default /output).
+The entry is written exactly as-is, with no trailing newline.
 """
+
 import os
 
-ENTRY = 'Something went wrong: specifically, we shipped code nobody tested, the test suite was a prayer, and the prayer has now expired.'
+ENTRY = "ERROR 418: Nothing is actually broken except your code, which has been held together by hope and one uncommented function since 2019."
 
-
-def main() -> None:
+def main():
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
-    path = os.path.join(out_dir, "entry.txt")
-    with open(path, "w", encoding="utf-8") as f:
+    entry_path = os.path.join(out_dir, "entry.txt")
+    with open(entry_path, "w", encoding="utf-8") as f:
         f.write(ENTRY)
-    print(f"wrote {len(ENTRY)} chars to {path}")
-
 
 if __name__ == "__main__":
     main()
